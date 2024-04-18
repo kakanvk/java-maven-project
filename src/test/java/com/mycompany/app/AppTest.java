@@ -13,7 +13,7 @@ public class AppTest {
         assertTrue(App.isPrime(5));
         assertTrue(App.isPrime(7));
         assertTrue(App.isPrime(11));
-        assertTrue(App.isPrime(22));
+        assertTrue(App.isPrime(7919));
         
         assertFalse(App.isPrime(4));
         assertFalse(App.isPrime(6));
