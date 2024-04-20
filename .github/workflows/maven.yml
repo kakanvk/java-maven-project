@@ -17,12 +17,13 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         cache: maven
+    - name: Clone testcases
+      run: git clone https://github.com/kakanvk/testcases.git
+    - name: Move testcases to src
+      run: mv testcases/test src/
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: Run tests
-      run: |
-        git clone https://github.com/kakanvk/testcases.git
-        cd testcases
-        mvn -B test
+      run: mvn -B test
     - name: Remove target directory
       run: rm -rf target
