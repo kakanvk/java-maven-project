@@ -1,17 +1,19 @@
-<plugin>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-checkstyle-plugin</artifactId>
-    <version>3.1.1</version>
-    <configuration>
-        <configLocation>path/to/your/checkstyle.xml</configLocation>
-    </configuration>
-    <executions>
-        <execution>
-            <id>checkstyle</id>
-            <phase>verify</phase>
-            <goals>
-                <goal>check</goal>
-            </goals>
-        </execution>
-    </executions>
-</plugin>
+<checkstyle version="8.3.1">
+    <treeWalker>
+      <module name="com.mycompany.app" location=".">
+        <property name="indent" value="4" />
+        <property name="lineLength" value="120" />
+        <property name="tabCharacter" value="\t" />
+        <filter name="excludeTests" ref="excludeTestFiles" />
+      </module>
+    </treeWalker>
+    <default severity="warning" />
+    <suppressionFilter name="ignoreJavadoc">
+      <pattern>^//.*$</pattern>
+    </suppressionFilter>
+    <suppressionFilter name="ignoreAnnotations">
+      <pattern>@.*</pattern>
+    </suppressionFilter>
+    <severity name="JavadocTypeCheck" value="ignore" />
+    <severity name="MissingJavadoc" value="ignore" />
+  </checkstyle>
