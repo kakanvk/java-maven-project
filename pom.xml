@@ -67,7 +67,7 @@
         <artifactId>maven-project-info-reports-plugin</artifactId>
         <version>3.1.1</version>
       </plugin>
-      
+
       <!-- Plugin kiểm tra định dạng mã -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -88,12 +88,12 @@
           <consoleOutput>true</consoleOutput>
         </configuration>
       </plugin>
-      
+
       <!-- Plugin kiểm tra lỗi code -->
       <plugin>
         <groupId>com.github.spotbugs</groupId>
         <artifactId>spotbugs-maven-plugin</artifactId>
-        <version>4.6.0</version>
+        <version>4.1.4</version>
         <executions>
           <execution>
             <id>spotbugs</id>
@@ -104,7 +104,7 @@
           </execution>
         </executions>
       </plugin>
-      
+
     </plugins>
   </build>
 </project>
