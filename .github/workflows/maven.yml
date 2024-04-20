@@ -17,7 +17,7 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         cache: maven
-        
+
     - name: Clone testcases
       run: git clone https://github.com/kakanvk/testcases.git
 
@@ -28,7 +28,7 @@ jobs:
       run: mvn -B package --file pom.xml
 
     - name: Run tests
-      run: mvn -B test
+      run: mvn -B -q test --file pom.xml
 
     - name: Remove target directory
       run: rm -rf target
