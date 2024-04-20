@@ -14,11 +14,6 @@ public class App {
     }
 
     public static void main(String[] args) {
-        int number = 17; // Số cần kiểm tra
-        if (isPrime(number)) {
-            System.out.println(number + " is prime.");
-        } else {
-            System.out.println(number + " is not prime.");
-        }
+        
     }
 }
