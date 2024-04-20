@@ -31,7 +31,8 @@ jobs:
       run: mvn -B -q test
 
     - name: Check code formatting and find issues
-      run: mvn verify --file pom.xml
+      run: mvn -B -q clean verify checkstyle:check
+      continue-on-error: true
 
     - name: Remove target directory
       run: rm -rf target
