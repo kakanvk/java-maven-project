@@ -1,7 +1,19 @@
 package com.mycompany.app;
 
-public class App {
-    public static boolean isPrime(int n) {
+public final class App {
+    
+    private App() {
+        // Private constructor to prevent instantiation as it's a utility class
+        throw new AssertionError("Utility class cannot be instantiated");
+    }
+
+    /**
+     * Checks whether a given number is a prime number.
+     *
+     * @param n The number to be checked
+     * @return True if the number is prime, false otherwise
+     */
+    public static boolean isPrime(final int n) {
         if (n <= 1) {
             return false;
         }
@@ -13,7 +25,12 @@ public class App {
         return true;
     }
 
-    public static void main(String[] args) {
-        
+    /**
+     * Main method.
+     *
+     * @param args The command line arguments
+     */
+    public static void main(final String[] args) {
+        // Main method intentionally left blank
     }
 }
