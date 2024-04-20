@@ -1,11 +1,8 @@
-# This workflow will build a Java project with Maven, and cache/restore any dependencies to improve the workflow execution time
-# For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
-
 name: Java CI with Maven
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "test" ]
 
 jobs:
   build:
@@ -23,6 +20,9 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: Run tests
-      run: mvn -B test --file pom.xml
+      run: |
+        git clone https://github.com/kakanvk/testcases.git
+        cd testcases
+        mvn -B test
     - name: Remove target directory
       run: rm -rf target
