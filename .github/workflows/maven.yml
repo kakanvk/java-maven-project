@@ -25,10 +25,13 @@ jobs:
       run: mv testcases/test src/
 
     - name: Build with Maven
-      run: mvn -B package --file pom.xml
+      run: mvn -B -q package --file pom.xml
 
     - name: Run tests
       run: mvn -B -q test
+
+    - name: Run Checkstyle
+      run: mvn checkstyle:check
 
     - name: Remove target directory
       run: rm -rf target
