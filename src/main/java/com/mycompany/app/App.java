@@ -16,7 +16,7 @@ public final class App {
      * @param n The number to be checked
      * @return True if the number is prime, false otherwise
      */
-    public static boolean isPrime(final int n) {
+            public static boolean isPrime(final int n) {
         if (n <= 1) {
             return false;
         }
