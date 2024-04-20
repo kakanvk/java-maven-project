@@ -28,11 +28,7 @@ jobs:
       run: mvn -B package --file pom.xml
 
     - name: Run tests
-      run: |
-        mvn -B test --file pom.xml | tee test_result.txt
-        SUCCESS=$(grep -c "Tests run:.*Failures: 0, Errors: 0, Skipped: 0" test_result.txt)
-        TOTAL=$(awk '/Tests run:/{print $3}' test_result.txt | awk -F',' '{print $1}')
-        echo "Tests passed: $SUCCESS out of $TOTAL"
+      run: mvn -B -q test
 
     - name: Remove target directory
       run: rm -rf target
