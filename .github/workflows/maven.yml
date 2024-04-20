@@ -31,7 +31,7 @@ jobs:
       run: mvn -B -q test
 
     - name: Run Checkstyle
-      run: mvn checkstyle:check
+      run: mvn -B -q checkstyle:check
 
     - name: Remove target directory
       run: rm -rf target
