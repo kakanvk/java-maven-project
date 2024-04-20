@@ -43,7 +43,7 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <version>3.0.0-M5</version>
         <configuration>
-          <skipAfterFailureCount>1</skipAfterFailureCount>
+          <skipAfterFailureCount>0</skipAfterFailureCount>
           <summaryFile>true</summaryFile>
         </configuration>
       </plugin>
