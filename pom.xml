@@ -67,49 +67,6 @@
         <artifactId>maven-project-info-reports-plugin</artifactId>
         <version>3.1.1</version>
       </plugin>
-
-      <!-- Plugin kiểm tra định dạng mã -->
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-checkstyle-plugin</artifactId>
-        <version>3.1.1</version>
-        <executions>
-          <execution>
-            <id>checkstyle</id>
-            <phase>verify</phase>
-            <goals>
-              <goal>check</goal>
-            </goals>
-          </execution>
-        </executions>
-        <configuration>
-          <configLocation>checkstyle.xml</configLocation>
-          <encoding>UTF-8</encoding>
-          <consoleOutput>true</consoleOutput>
-        </configuration>
-      </plugin>
-
-      <!-- Plugin kiểm tra lỗi code -->
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-checkstyle-plugin</artifactId>
-        <version>3.1.1</version>
-        <executions>
-          <execution>
-            <id>checkstyle</id>
-            <phase>verify</phase>
-            <goals>
-              <goal>check</goal>
-            </goals>
-          </execution>
-        </executions>
-        <configuration>
-          <configLocation>checkstyle.xml</configLocation>
-          <encoding>UTF-8</encoding>
-          <consoleOutput>true</consoleOutput>
-        </configuration>
-      </plugin>
-
     </plugins>
   </build>
 </project>
